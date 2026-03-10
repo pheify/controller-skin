@@ -1,18 +1,52 @@
 /*
  * Pheify Custom GamePad Viewer Skin
+ * White body, Pheify orange (#F26C00) accents
  * Skin: PlayStation 4 (White)
- * URL: https://raw.githubusercontent.com/pheify/controller-skin/main/skin.css
  */
 
 /* =============================================
-   CONTROLLER BODY — full orange recolor
+   CONTROLLER BODY — keep white, no filter
    ============================================= */
 .controller.ds4 {
-    filter: sepia(1) saturate(8) hue-rotate(340deg) brightness(1.1) !important;
+    filter: none !important;
 }
 
 /* =============================================
-   TOUCHPAD — orange bg + Pheify logo on top
+   ORANGE ACCENTS — triggers, bumpers, dpad,
+   buttons, sticks: shift red → Pheify orange
+   hue-rotate(20deg) nudges red to orange
+   ============================================= */
+.ds4 .trigger {
+    filter: hue-rotate(20deg) saturate(1.4) brightness(1.1) !important;
+}
+
+.ds4 .bumper {
+    filter: hue-rotate(20deg) saturate(1.4) brightness(1.1) !important;
+}
+
+.ds4 .face {
+    filter: hue-rotate(20deg) saturate(1.4) brightness(1.1) !important;
+}
+
+.ds4 .button {
+    filter: hue-rotate(20deg) saturate(1.4) brightness(1.1) !important;
+}
+
+.ds4 .stick {
+    filter: hue-rotate(20deg) saturate(1.4) brightness(1.1) !important;
+}
+
+.ds4 .back,
+.ds4 .start {
+    filter: hue-rotate(20deg) saturate(1.4) brightness(1.1) !important;
+}
+
+.ds4 .meta {
+    filter: hue-rotate(20deg) saturate(1.4) brightness(1.1) !important;
+}
+
+/* =============================================
+   TOUCHPAD — orange bg + Pheify logo
    ============================================= */
 .ds4 .touchpad {
     background-color: #F26C00 !important;
@@ -32,28 +66,28 @@
 }
 
 /* =============================================
-   BUTTON PRESS GLOW
+   PRESS FEEDBACK — bright glow on all inputs
    ============================================= */
 .ds4 .button.pressed {
-    filter: brightness(1.5) drop-shadow(0 0 6px rgba(255,255,255,0.9)) !important;
+    filter: hue-rotate(20deg) saturate(1.4) brightness(1.6) drop-shadow(0 0 6px rgba(242,108,0,0.9)) !important;
 }
 
 .ds4 .trigger.pressed {
-    filter: brightness(1.4) drop-shadow(0 0 8px rgba(255,255,255,0.8)) !important;
+    filter: hue-rotate(20deg) saturate(1.4) brightness(1.5) drop-shadow(0 0 8px rgba(242,108,0,0.9)) !important;
 }
 
 .ds4 .bumper.pressed {
-    filter: brightness(1.4) drop-shadow(0 0 6px rgba(255,255,255,0.8)) !important;
+    filter: hue-rotate(20deg) saturate(1.4) brightness(1.5) drop-shadow(0 0 6px rgba(242,108,0,0.9)) !important;
 }
 
 .ds4 .stick.pressed {
-    filter: brightness(1.4) drop-shadow(0 0 6px rgba(255,255,255,0.7)) !important;
+    filter: hue-rotate(20deg) saturate(1.4) brightness(1.5) drop-shadow(0 0 6px rgba(242,108,0,0.8)) !important;
 }
 
 .ds4 .face.pressed {
-    filter: brightness(1.5) !important;
+    filter: hue-rotate(20deg) saturate(1.4) brightness(1.6) !important;
 }
 
 .ds4 .meta.pressed {
-    filter: brightness(1.6) drop-shadow(0 0 10px rgba(255,255,255,1)) !important;
+    filter: hue-rotate(20deg) saturate(1.4) brightness(1.7) drop-shadow(0 0 10px rgba(242,108,0,1)) !important;
 }
