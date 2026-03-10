@@ -1,1 +1,94 @@
+/*
+ * Pheify Custom GamePad Viewer Skin
+ * White body, all accents Pheify orange
+ * Skin: PlayStation 4 (White)
+ */
 
+/* =============================================
+   CONTROLLER BODY
+   hue-rotate shifts ALL red parts (grips +
+   accents) to orange. White/black unaffected.
+   ============================================= */
+.controller.ds4 {
+    filter: hue-rotate(20deg) saturate(1.5) brightness(1.05) !important;
+}
+
+/* =============================================
+   FACE BUTTONS — strip existing color → orange
+   (triangle=teal, square=pink, circle=red, x=blue
+   all need to be overridden to orange)
+   ============================================= */
+.ds4 .button {
+    filter: grayscale(1) sepia(1) saturate(8) hue-rotate(340deg) brightness(1.05) !important;
+}
+
+/* =============================================
+   TRIGGERS L2/R2 — force visible + orange
+   (default opacity:0, must override to show)
+   ============================================= */
+.ds4 .trigger {
+    opacity: 0.85 !important;
+    filter: grayscale(1) sepia(1) saturate(8) hue-rotate(340deg) brightness(1.05) !important;
+}
+
+/* =============================================
+   BUMPERS L1/R1 — force visible + orange
+   ============================================= */
+.ds4 .bumper {
+    opacity: 0.85 !important;
+    filter: grayscale(1) sepia(1) saturate(8) hue-rotate(340deg) brightness(1.05) !important;
+}
+
+/* =============================================
+   TOUCHPAD — full logo, no hard border
+   ============================================= */
+.ds4 .touchpad {
+    background-image: url("data:image/webp;base64,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") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-color: transparent !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    filter: none !important;
+}
+
+.ds4 .touchpad.pressed {
+    background-image: url("data:image/webp;base64,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") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-color: transparent !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    filter: brightness(1.3) !important;
+}
+
+/* =============================================
+   PRESS FEEDBACK
+   ============================================= */
+.ds4 .button.pressed {
+    filter: grayscale(1) sepia(1) saturate(8) hue-rotate(340deg) brightness(1.7) drop-shadow(0 0 8px rgba(242,108,0,0.95)) !important;
+}
+
+.ds4 .trigger.pressed {
+    opacity: 1 !important;
+    filter: grayscale(1) sepia(1) saturate(8) hue-rotate(340deg) brightness(1.6) drop-shadow(0 0 10px rgba(242,108,0,0.95)) !important;
+}
+
+.ds4 .bumper.pressed {
+    opacity: 1 !important;
+    filter: grayscale(1) sepia(1) saturate(8) hue-rotate(340deg) brightness(1.6) drop-shadow(0 0 8px rgba(242,108,0,0.95)) !important;
+}
+
+.ds4 .stick.pressed {
+    filter: grayscale(1) sepia(1) saturate(8) hue-rotate(340deg) brightness(1.6) drop-shadow(0 0 8px rgba(242,108,0,0.8)) !important;
+}
+
+.ds4 .face.pressed {
+    filter: hue-rotate(20deg) saturate(1.5) brightness(1.7) !important;
+}
+
+.ds4 .meta.pressed {
+    filter: grayscale(1) sepia(1) saturate(8) hue-rotate(340deg) brightness(1.8) drop-shadow(0 0 12px rgba(242,108,0,1)) !important;
+}
